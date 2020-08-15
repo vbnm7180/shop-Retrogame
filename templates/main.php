@@ -157,7 +157,7 @@
                     <div class="tabs">
                         <div class="tabs__nav">
                             <div class="separator2">
-                                <a href="#sega_saturn" class="tabs__link tabs__link_active">sega saturn</a>
+                                <a href="#sega_saturn" class="tabs__link tabs__link_active" >sega saturn</a>
                                 <a href="#sega_mega_drive" class="tabs__link">sega mega drive</a>
                                 <a href="#sega_dreamcast" class="tabs__link"> sega dreamcast</a>
                             </div>
@@ -168,94 +168,7 @@
                             </div>
                         </div>
                         <div class="tabs__content">
-                            <div class="tabs__content__item tabs__content__item__show" id="sega_saturn">
-                                <div class="game__item">
-                                    <img src="/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
-                                    <div class="game__item__title">
-                                        <p class="game__item__title-text">Nights into Dreams</p>
-                                    </div>
-                                    <button class="btn btn-game"> В корзину</button>
-                                </div>
-                                <div class="game__item">
-                                    <img src="/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
-                                    <div class="game__item__title">
-                                        <p class="game__item__title-text">Nights into Dreams</p>
-                                    </div>
-                                    <button class="btn btn-game"> В корзину</button>
-                                </div>
-                                <div class="game__item">
-                                    <img src="/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
-                                    <div class="game__item__title">
-                                        <p class="game__item__title-text">Nights into Dreams</p>
-                                    </div>
-                                    <button class="btn btn-game"> В корзину</button>
-                                </div>
-                                <div class="game__item">
-                                    <img src="/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
-                                    <div class="game__item__title">
-                                        <p class="game__item__title-text">Nights into Dreams</p>
-                                    </div>
-                                    <button class="btn btn-game"> В корзину</button>
-                                </div>
-                                <div class="game__item">
-                                    <img src="/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
-                                    <div class="game__item__title">
-                                        <p class="game__item__title-text">Nights into Dreams</p>
-                                    </div>
-                                    <button class="btn btn-game"> В корзину</button>
-                                </div>
-                                <div class="game__item">
-                                    <img src="/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
-                                    <div class="game__item__title">
-                                        <p class="game__item__title-text">Nights into Dreams</p>
-                                    </div>
-                                    <button class="btn btn-game"> В корзину</button>
-                                </div>
-                                <div class="game__item game__item-line__break">
-
-                                </div>
-                                <div class="game__item">
-                                    <img src="/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
-                                    <div class="game__item__title">
-                                        <p class="game__item__title-text">Nights into Dreams</p>
-                                    </div>
-                                    <button class="btn btn-game"> В корзину</button>
-                                </div>
-                                <div class="game__item">
-                                    <img src="/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
-                                    <div class="game__item__title">
-                                        <p class="game__item__title-text">Nights into Dreams</p>
-                                    </div>
-                                    <button class="btn btn-game"> В корзину</button>
-                                </div>
-                                <div class="game__item">
-                                    <img src="/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
-                                    <div class="game__item__title">
-                                        <p class="game__item__title-text">Nights into Dreams</p>
-                                    </div>
-                                    <button class="btn btn-game"> В корзину</button>
-                                </div>
-                                <div class="game__item">
-                                    <img src="/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
-                                    <div class="game__item__title">
-                                        <p class="game__item__title-text">Nights into Dreams</p>
-                                    </div>
-                                    <button class="btn btn-game"> В корзину</button>
-                                </div>
-                                <div class="game__item">
-                                    <img src="/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
-                                    <div class="game__item__title">
-                                        <p class="game__item__title-text">Nights into Dreams</p>
-                                    </div>
-                                    <button class="btn btn-game"> В корзину</button>
-                                </div>
-                                <div class="game__item">
-                                    <img src="/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
-                                    <div class="game__item__title">
-                                        <p class="game__item__title-text">Nights into Dreams</p>
-                                    </div>
-                                    <button class="btn btn-game"> В корзину</button>
-                                </div>
+                            <div class="tabs__content__item tabs__content__item__show" id="2-7">
                             </div>
                             <div class="tabs__content__item" id="sega_mega_drive">игры сегамега драйв</div>
                             <div class="tabs__content__item" id="sega_dreamcast">игры сега дримкаст</div>

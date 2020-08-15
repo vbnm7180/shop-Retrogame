@@ -33,7 +33,7 @@
 				</ul>
 				<div class="header__logo header__item">
 				  <form action="/controllers/pageController.php">
-				    <input type="hidden" name="page_id" value="main">
+					<input type="hidden" name="page_id" value="main">
 					<button type="submit" class="logo__link"><img class="header__img" src="/images/logo_rg.png" alt="logo"></button>
 				  </form>
 				</div>

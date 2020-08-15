@@ -3,17 +3,17 @@
 
                 <div class="stock" id="stock">
                     <div class="stock__item">
-                        <img src="assets/images/slide_1.png" alt="slide" class="slider__image">
+                        <img src="/images/slide_1.png" alt="slide" class="slider__image">
                     </div>
                     <div class="stock__item">
-                        <img src="assets/images/slide_2.png" alt="slide" class="slider__image2">
+                        <img src="/images/slide_2.png" alt="slide" class="slider__image2">
                     </div>
                 </div>
             </section>
             <div class="slider__controls">
-                <button id="prev" class="stock__arrow stock__arrow-left"><img src="assets/images/arrow_left.png"
+                <button id="prev" class="stock__arrow stock__arrow-left"><img src="/images/arrow_left.png"
                         alt="arrow" class="arrow" style="width: 30px; height: 12px"></button>
-                <button id="next" class="stock__arrow stock__arrow-right"><img src="assets/images/arrow_right.png"
+                <button id="next" class="stock__arrow stock__arrow-right"><img src="/images/arrow_right.png"
                         alt="arrow" class="arrow" style="width: 30px; height: 12px"></button>
             </div>
         </main>
@@ -49,7 +49,7 @@
                         <div class="conosle__card">
                             <div class="card__item">
                                 <div class="img__container">
-                                    <img src="assets/images/consoles/sega_saturn.png" alt="" class="console__img">
+                                    <img src="/images/consoles/sega_saturn.png" alt="" class="console__img">
                                 </div>
                                 <h4>sega saturn</h4>
                                 <p class="console__card__text">Игровая приставка с разрядностью 32 бита. Она была выпущена 22 ноября 1994 года в Японии, в мае в США и 8 июля 1995 года в Европе</p>
@@ -60,7 +60,7 @@
                             </div>
                             <div class="card__item">
                                 <div class="img__container">
-                                    <img src="assets/images/consoles/sega_saturn.png" alt="" class="console__img">
+                                    <img src="/images/consoles/sega_saturn.png" alt="" class="console__img">
                                 </div>
                                 <h4>sega saturn</h4>
                                 <p class="console__card__text">Игровая приставка с разрядностью 32 бита. Она была выпущена 22 ноября 1994 года в Японии, в мае в США и 8 июля 1995 года в Европе</p>
@@ -71,7 +71,7 @@
                             </div>
                             <div class="card__item">
                                 <div class="img__container">
-                                    <img src="assets/images/consoles/sega_saturn.png" alt="" class="console__img">
+                                    <img src="/images/consoles/sega_saturn.png" alt="" class="console__img">
                                 </div>
                                 <h4>sega saturn</h4>
                                 <p class="console__card__text">Игровая приставка с разрядностью 32 бита. Она была выпущена 22 ноября 1994 года в Японии, в мае в США и 8 июля 1995 года в Европе</p>
@@ -102,7 +102,7 @@
                     <div class="conosle__card conosle__card-nintendo">
                         <div class="card__item">
                             <div class="img__container">
-                                <img src="assets/images/consoles/sega_saturn.png" alt="" class="console__img">
+                                <img src="/images/consoles/sega_saturn.png" alt="" class="console__img">
                             </div>
                             <h4>sega saturn</h4>
                             <p class="console__card__text">Игровая приставка с разрядностью 32 бита. Она была выпущена 22 ноября 1994 года в Японии, в мае в США и 8 июля 1995 года в Европе</p>
@@ -113,7 +113,7 @@
                         </div>
                         <div class="card__item">
                             <div class="img__container">
-                                <img src="assets/images/consoles/sega_saturn.png" alt="" class="console__img">
+                                <img src="/images/consoles/sega_saturn.png" alt="" class="console__img">
                             </div>
                             <h4>sega saturn</h4>
                             <p class="console__card__text">Игровая приставка с разрядностью 32 бита. Она была выпущена 22 ноября 1994 года в Японии, в мае в США и 8 июля 1995 года в Европе</p>
@@ -124,7 +124,7 @@
                         </div>
                         <div class="card__item">
                             <div class="img__container">
-                                <img src="assets/images/consoles/sega_saturn.png" alt="" class="console__img">
+                                <img src="/images/consoles/sega_saturn.png" alt="" class="console__img">
                             </div>
                             <h4>sega saturn</h4>
                             <p class="console__card__text">Игровая приставка с разрядностью 32 бита. Она была выпущена 22 ноября 1994 года в Японии, в мае в США и 8 июля 1995 года в Европе</p>
@@ -170,42 +170,42 @@
                         <div class="tabs__content">
                             <div class="tabs__content__item tabs__content__item__show" id="sega_saturn">
                                 <div class="game__item">
-                                    <img src="assets/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
+                                    <img src="/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
                                     <div class="game__item__title">
                                         <p class="game__item__title-text">Nights into Dreams</p>
                                     </div>
                                     <button class="btn btn-game"> В корзину</button>
                                 </div>
                                 <div class="game__item">
-                                    <img src="assets/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
+                                    <img src="/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
                                     <div class="game__item__title">
                                         <p class="game__item__title-text">Nights into Dreams</p>
                                     </div>
                                     <button class="btn btn-game"> В корзину</button>
                                 </div>
                                 <div class="game__item">
-                                    <img src="assets/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
+                                    <img src="/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
                                     <div class="game__item__title">
                                         <p class="game__item__title-text">Nights into Dreams</p>
                                     </div>
                                     <button class="btn btn-game"> В корзину</button>
                                 </div>
                                 <div class="game__item">
-                                    <img src="assets/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
+                                    <img src="/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
                                     <div class="game__item__title">
                                         <p class="game__item__title-text">Nights into Dreams</p>
                                     </div>
                                     <button class="btn btn-game"> В корзину</button>
                                 </div>
                                 <div class="game__item">
-                                    <img src="assets/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
+                                    <img src="/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
                                     <div class="game__item__title">
                                         <p class="game__item__title-text">Nights into Dreams</p>
                                     </div>
                                     <button class="btn btn-game"> В корзину</button>
                                 </div>
                                 <div class="game__item">
-                                    <img src="assets/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
+                                    <img src="/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
                                     <div class="game__item__title">
                                         <p class="game__item__title-text">Nights into Dreams</p>
                                     </div>
@@ -215,42 +215,42 @@
 
                                 </div>
                                 <div class="game__item">
-                                    <img src="assets/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
+                                    <img src="/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
                                     <div class="game__item__title">
                                         <p class="game__item__title-text">Nights into Dreams</p>
                                     </div>
                                     <button class="btn btn-game"> В корзину</button>
                                 </div>
                                 <div class="game__item">
-                                    <img src="assets/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
+                                    <img src="/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
                                     <div class="game__item__title">
                                         <p class="game__item__title-text">Nights into Dreams</p>
                                     </div>
                                     <button class="btn btn-game"> В корзину</button>
                                 </div>
                                 <div class="game__item">
-                                    <img src="assets/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
+                                    <img src="/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
                                     <div class="game__item__title">
                                         <p class="game__item__title-text">Nights into Dreams</p>
                                     </div>
                                     <button class="btn btn-game"> В корзину</button>
                                 </div>
                                 <div class="game__item">
-                                    <img src="assets/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
+                                    <img src="/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
                                     <div class="game__item__title">
                                         <p class="game__item__title-text">Nights into Dreams</p>
                                     </div>
                                     <button class="btn btn-game"> В корзину</button>
                                 </div>
                                 <div class="game__item">
-                                    <img src="assets/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
+                                    <img src="/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
                                     <div class="game__item__title">
                                         <p class="game__item__title-text">Nights into Dreams</p>
                                     </div>
                                     <button class="btn btn-game"> В корзину</button>
                                 </div>
                                 <div class="game__item">
-                                    <img src="assets/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
+                                    <img src="/images/games/nights_into_dreams.png" alt="" class="game__item-picture">
                                     <div class="game__item__title">
                                         <p class="game__item__title-text">Nights into Dreams</p>
                                     </div>
@@ -283,7 +283,7 @@
                     </div>
                 </div>
                 <div class="about__picture">
-                    <img src="assets/images/about_bg.png" alt="" class="about__img">
+                    <img src="/images/about_bg.png" alt="" class="about__img">
                 </div>
 
             </div>

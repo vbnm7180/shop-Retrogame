@@ -12,4 +12,4 @@ $_SESSION['login']="";
 $_SESSION['password']="";
 }
 
-header("Location: http://retrogame/controllers/pageController.php?page_id=main");
+header("Location: http://retrogame2/controllers/pageController.php?page_id=main");

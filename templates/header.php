@@ -32,7 +32,10 @@
 					<li class="nav__item"> <a href="#" class="nav__link" id="last">О нас</a></li>
 				</ul>
 				<div class="header__logo header__item">
-					<a href="index.html" class="logo__link "><img class="header__img" src="/images/logo_rg.png" alt="logo"></a>
+				  <form action="/controllers/pageController.php">
+				    <input type="hidden" name="page_id" value="main">
+					<button type="submit" class="logo__link "><img class="header__img" src="/images/logo_rg.png" alt="logo"></button>
+				  </form>
 				</div>
 				<div class="contacts header__item">
 					<a class="header__contacts icon__phone" href="tel:343342"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">

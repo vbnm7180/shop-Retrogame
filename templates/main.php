@@ -157,24 +157,24 @@
                     <div class="tabs">
                         <div class="tabs__nav">
                             <div class="separator2">
-                                <a href="#sega_saturn" class="tabs__link tabs__link_active" >sega saturn</a>
-                                <a href="#sega_mega_drive" class="tabs__link">sega mega drive</a>
-                                <a href="#sega_dreamcast" class="tabs__link"> sega dreamcast</a>
+                                <a href="#2-7" class="tabs__link tabs__link_active" >sega saturn</a>
+                                <a href="#2-8" class="tabs__link">sega mega drive</a>
+                                <a href="#2-9" class="tabs__link"> sega dreamcast</a>
                             </div>
                             <div class="separator2 ">
-                                <a href="#nintendo_nes" class="tabs__link  ">nintendo nes</a>
-                                <a href="#nintendo_snes" class="tabs__link">nintendo snes</a>
-                                <a href="#nintendo_64" class="tabs__link"> nintendo 64</a>
+                                <a href="#2-10" class="tabs__link  ">nintendo nes</a>
+                                <a href="#2-11" class="tabs__link">nintendo snes</a>
+                                <a href="#2-12" class="tabs__link"> nintendo 64</a>
                             </div>
                         </div>
                         <div class="tabs__content">
                             <div class="tabs__content__item tabs__content__item__show" id="2-7">
                             </div>
-                            <div class="tabs__content__item" id="sega_mega_drive">игры сегамега драйв</div>
-                            <div class="tabs__content__item" id="sega_dreamcast">игры сега дримкаст</div>
-                            <div class="tabs__content__item" id="nintendo_nes">игры нинтендо нес</div>
-                            <div class="tabs__content__item" id="nintendo_snes">игры нинтендо cнес</div>
-                            <div class="tabs__content__item" id="nintendo_64">игры нинтендо 64</div>
+                            <div class="tabs__content__item" id="2-8">игры сегамега драйв</div>
+                            <div class="tabs__content__item" id="2-9">игры сега дримкаст</div>
+                            <div class="tabs__content__item" id="2-10">игры нинтендо нес</div>
+                            <div class="tabs__content__item" id="2-11">игры нинтендо cнес</div>
+                            <div class="tabs__content__item" id="2-12">игры нинтендо 64</div>
 
                         </div>
                     </div>

@@ -8,7 +8,10 @@ session_start();
 */
 $categ = $_REQUEST['categ'];
 //$section_id = $categ[0];
-$categ_id = $categ[2];
+$reg='/-(\d+)/';
+preg_match($reg,$categ,$arr);
+$categ_id = $arr[1];
+
 
 //Установка соединения с SQL, если соединение успешно
 if ($db = mysqli_connect('localhost', 'root', '')) {

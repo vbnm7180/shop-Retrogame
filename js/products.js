@@ -1,15 +1,13 @@
 //вывод карточек игр
-
+//призагрузке окна
 $(window).on('load',
     function(e) {
-        //Получение id категории
-        console.log($('.tabs__content__item'));
+        //Для каждой категории
         $('.tabs__content__item').each(function() {
+            //Получение id категории
             let categ = this.id;
             let data = "categ=" + categ;
-            //let link = $(e.target).href;
-            console.log(data);
-            //Загрузка товаров в модальное окно
+            //Загрузка товаров в блок этой категории
             $(this).load('/models/gamesProductsModel.php', data);
         })
     }

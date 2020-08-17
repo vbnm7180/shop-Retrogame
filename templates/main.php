@@ -19,7 +19,9 @@
 
     <div class="popup" id="popup-nintendo-64">
         <div class="popup__body">
+            <button type="button" class="popup__close"><img src="/images/popup/popup_close.png" alt="quit" class="popup__close-img"></button>          
             <div class="popup__content">
+  
             </div>
         </div>
     </div>
@@ -54,7 +56,7 @@
                         <p class="console__card__text">Игровая приставка с разрядностью 32 бита. Она была выпущена 22 ноября 1994 года в Японии, в мае в США и 8 июля 1995 года в Европе</p>
                         <div class="console__card__footer">
                             <p class="console__card__text">Цена <span class="price">от 9.000 ₽</span></p>
-                            <button type="button" class="btn card__btn " id="1-1">Выбрать</button>
+                            <button type="button" class="btn card__btn" id="1-1">Выбрать</button>
                         </div>
                     </div>
                     <div class="card__item">

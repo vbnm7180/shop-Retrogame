@@ -17,17 +17,18 @@ $categ_id = $arr[1];
 if ($db = mysqli_connect('localhost', 'root', '')) {
 
 	//Соединяемся с базой данных retrogame
-	if (mysqli_select_db($db, 'retrogame')) {
+	if (mysqli_select_db($db, 'retrogame2')) {
 
 		//Выбор названия категории
 		$select_category_name = 'SELECT * FROM `categories` WHERE `category_id`=' . $categ_id . '';
 
 		//Выбор товаров
-		$select_products = 'SELECT * FROM `consoles_products` WHERE `category_id`=' . $categ_id . '';
+		$select_products = 'SELECT * FROM `consoles_products` WHERE `category_id`='. $categ_id . '';
 
 		//Запросы к бд
 		$query_category_name = mysqli_query($db, $select_category_name);
 		$query_products = mysqli_query($db, $select_products);
+
 
 		//Обработка результатов запроса названия категории
 		$res1 = mysqli_fetch_array($query_category_name);
@@ -35,7 +36,6 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 
 		echo "				
 		<div class=\"popup__main-text\"><span class=\"popup__console-name\">$category_name</span>  Товары в наличии</div>
-		<button type=\"button\" class=\"popup__close\"><img src=\"/images/popup/popup_close.png\" alt=\"quit\" class=\"popup__close-img\"></button>
 		";
 
 		//Обработка результатов запроса товаров. Цикл пока не пройдут все товары выбранной категории

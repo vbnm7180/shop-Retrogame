@@ -34,9 +34,11 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 		$res1 = mysqli_fetch_array($query_category_name);
 		$category_name = $res1['category_name'];
 
+		/*
 		echo "				
 		<div class=\"popup__main-text\"><span class=\"popup__console-name\">$category_name</span>  Товары в наличии</div>
 		";
+		*/
 
 		//Обработка результатов запроса товаров. Цикл пока не пройдут все товары выбранной категории
 		while ($res2 = mysqli_fetch_array($query_products)) {

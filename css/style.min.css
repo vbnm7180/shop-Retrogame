@@ -1812,7 +1812,8 @@ template {
     cursor: pointer;
     right: 59px;
     top: 57px;
-    font-size: 30px
+    font-size: 30px;
+    z-index: 100
 }
 
 .popup__main-text {

@@ -20,7 +20,7 @@ body {
 }
 
 .background__figures {
-    background-image: url(../images/figures.png);
+    background-image: url(/images/figures.png);
     height: 100%;
     background-size: contain;
     background-position: 50%
@@ -2243,7 +2243,7 @@ h4 {
 }
 
 .form__bg {
-    background-image: url(../images/private_cab/private_bg.png);
+    background-image: url(/images/private_cab/private_bg.png);
     height: 100%;
     background-size: contain;
     background-position: 50%;

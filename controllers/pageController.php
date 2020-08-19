@@ -24,7 +24,7 @@ switch ($page_id) {
 	case 'user-area':
 		if ($_SESSION['login']=="" && $_SESSION['password']=="")
 		{
-			require "$root/templates/login.php";
+			require "$root/templates/form.php";
 		}
 		else{
 		require "$root/templates/account.php";

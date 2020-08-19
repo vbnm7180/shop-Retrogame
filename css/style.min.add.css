@@ -1,0 +1,14 @@
+.logo__link,
+.icon__pr {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.header__pr {
+    width: 30px;
+    height: 32.5px;
+}

@@ -166,11 +166,10 @@
                         <button class="btn game-btn" id="2-12"> nintendo 64</button>
                     </div>
                 </div>
+                <div class="tabs__sale">любая игра 299 &#8381; </div>
                 <div class="tabs__content">
-
                 </div>
             </div>
-        </div>
     </section>
 
     <div class="head__about">

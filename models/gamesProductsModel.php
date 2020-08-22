@@ -8,8 +8,8 @@ session_start();
 */
 $categ = $_REQUEST['categ'];
 //$section_id = $categ[0];
-$reg='/-(\d+)/';
-preg_match($reg,$categ,$arr);
+$reg = '/-(\d+)/';
+preg_match($reg, $categ, $arr);
 $categ_id = $arr[1];
 
 
@@ -38,14 +38,16 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 			//if (!in_array($product_id, $_SESSION['in_cart'])) {
 
 			echo "
-				
-				<div class=\"game__item\">
-				  <img src=\"/images/games/$image\" class=\"game__item-picture\">
-				  <div class=\"game__item__title\">
-				    <p class=\"game__item__title-text\">$name</p>
-				  </div>
-				  <button class=\"btn btn-game\" id=\"add_$product_id\"> В корзину</button>
-			    </div>
+
+			<div class=\"game__card\">
+			<div class=\"game__img\">
+				<img src=\"/images/games/$image\" alt=\"\" class=\"game-img\">
+			</div>
+			<div class=\"game__title\">
+			   $name
+			</div>
+			<button class=\"btn game-btn-buy\" id=\"add_$product_id\">В корзину</button>
+		    </div>
                             ";
 			//} 
 			//Если есть в корзине - только с кнопкой Перейти в корзину

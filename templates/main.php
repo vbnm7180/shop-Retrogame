@@ -136,7 +136,7 @@
         </div>
     </section>
     <section class="games">
-        <div class="game__section">
+        <div class="game__section" id="games">
             <hr class="line line-left line-game">
             <h1>игры</h1>
             <hr class="line line-right line-game">
@@ -172,7 +172,7 @@
             </div>
     </section>
 
-    <div class="head__about">
+    <div class="head__about" id="about">
         <hr class="line line-left line-about">
         <h1>О нас</h1>
         <hr class="line line-right line-about">

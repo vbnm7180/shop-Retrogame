@@ -1,44 +1,49 @@
 //Кнопка войти
 
-$('.log__btn').on('click',
-    function() {
+$('#signin-form').on('submit',
+    function(e) {
 
+        e.preventDefault();
         //Получение логина из формы
-        let formData = $('#111111').serialize();
+        let formData = $(this).serialize();
         console.log(formData);
+        //$('body').load('/models/loginModel.php', formData);
 
-        $.get('/models/loginModel.php', formData, function(data) {
-            if (data == 0) {
-                console.log(1);
+        $.getJSON('/models/loginModel.php', formData, function(data) {
+
+
+            if (data.login == 0) {
                 $('.signin__email').text('Неверный Email');
-                $('.signin__email').css('color', 'red');
-                $('.signin__email').next().css('color', 'red');
+                $('.signin__email').css('color', '#DF2121');
+                $('.signin__email').next().css('border-color', '#DF2121');
             }
-            if (data == 1) {
+            if (data.password == 0) {
                 $('.signin__passw').text('Неверный пароль');
-                $('.signin__passw').css('color', 'red');
-                $('.signin__passw').next().css('color', 'red');
+                $('.signin__passw').css('color', '#DF2121');
+                $('.signin__passw').next().css('border-color', '#DF2121');
             }
-            if (data == 2) {
+            if (data.login == 1 && data.password == 1) {
                 window.location.reload("/controllers/pageController.php?page_id=account");
             }
+
         });
+    }
+);
 
-        /*
+//Изменение инпута после ошибки
 
-        $.ajax({
-            type: "GET",
-            url: "/models/loginModel.php",
-            data: formData,
-            success: function(data) {
-                if (data == 1) {
-                    window.location.reload("/controllers/pageController.php?page_id=account");
-                } else {
+$('.email__input').on('input',
+    function() {
+        $(this).css('border-color', '#5E6572');
+        $(this).prev().css('color', '#5E6572');
+        $(this).prev().text('Ваш Email');
+    }
+);
 
-                    $('.error').html('Неправильный логин или пароль');
-                }
-            }
-        });
-        */
+$('.password__input').on('input',
+    function() {
+        $(this).css('border-color', '#5E6572');
+        $(this).prev().css('color', '#5E6572');
+        $(this).prev().text('Введите пароль');
     }
 );

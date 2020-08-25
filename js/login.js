@@ -9,6 +9,9 @@ $('#signin-form').on('submit',
         console.log(formData);
         //$('body').load('/models/loginModel.php', formData);
 
+
+
+
         $.getJSON('/models/loginModel.php', formData, function(data) {
 
 
@@ -27,6 +30,9 @@ $('#signin-form').on('submit',
             }
 
         });
+
+
+
     }
 );
 

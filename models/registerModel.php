@@ -39,7 +39,7 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 			$hash_password=password_hash($password, PASSWORD_DEFAULT);
 
 			mysqli_query($db, "INSERT INTO `users` (`login`, `password`,`name`) VALUES ('$login', '$hash_password', '$name')");
-			$_SESSION['username'] = $login;
+			$_SESSION['login'] = $login;
 			$_SESSION['password'] = $password;
 			//echo "INSERT INTO `users` (`login`, `password`) VALUES ('$login', '$password')";
 		}

@@ -40,7 +40,7 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 			$success['password'] = 0;
 		}
 		if ($success['login'] == 1 && $success['password'] == 1) {
-			$_SESSION['username'] = $login;
+			$_SESSION['login'] = $login;
 			$_SESSION['password'] = $password;
 		}
 

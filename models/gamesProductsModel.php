@@ -25,9 +25,10 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 		while ($res = mysqli_fetch_array($query)) {
 
 			//Выбор данных о товаре 
-			$name = $res['game_name'];
+			$name = $res['name'];
 			$image = $res['image'];
 			$price = $res['price'];
+			$section_id = $res['section_id'];
 			$product_id = $res['product_id'];
 
 			//Вывод карточки товара
@@ -39,7 +40,7 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 			<div class=\"game__title\">
 			   $name
 			</div>
-			<button class=\"btn game-btn-buy\" id=\"add_$product_id\">В корзину</button>
+			<button class=\"btn game-btn-buy add-cart\" id=\"add_$section_id-$product_id\">В корзину</button>
 		    </div>
             ";
 		}

@@ -8,6 +8,8 @@ if (!isset($_SESSION['in_cart'])) {
 	$_SESSION['in_cart'] = array();
 }
 
+
+
 //Создание переменных сессии для авторизации
 if (!isset($_SESSION['login']) && !isset($_SESSION['password'])) {
 $_SESSION['login']="";

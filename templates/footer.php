@@ -42,7 +42,8 @@
     <script src="/js/products.js"></script>  
     <script src="/js/login.js"></script>
     <script src="/js/register.js"></script>
-    <script src="/js/account.js"></script>            
+    <script src="/js/account.js"></script>
+    <script src="/js/cart.js"></script>               
     <script src="/js/app.min.js"></script>
 
 </body>

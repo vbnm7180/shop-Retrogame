@@ -26,21 +26,22 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 		$query_products = mysqli_query($db, $select_products);
 
 		//Обработка результатов запроса названия категории
-		$res1 = mysqli_fetch_array($query_category_name);
-		$category_name = $res1['category_name'];
+		$res_category_name = mysqli_fetch_array($query_category_name);
+		$category_name = $res_category_name['category_name'];
 
 		//Обработка результатов запроса товаров. Цикл пока не пройдут все товары выбранной категории
-		while ($res2 = mysqli_fetch_array($query_products)) {
+		while ($res_products = mysqli_fetch_array($query_products)) {
 
 			//Выбор данных о товаре 
-			$image = $res2['image'];
-			$console_name = $res2['console_name'];
-			$condition_rating = $res2['condition_rating'];
-			$description = $res2['description'];
-			$bundle = $res2['bundle'];
-			$region = $res2['region'];
-			$price = $res2['price'];
-			$product_id = $res2['product_id'];
+			$image = $res_products['image'];
+			$console_name = $res_products['name'];
+			$condition_rating = $res_products['condition_rating'];
+			$description = $res_products['description'];
+			$bundle = $res_products['bundle'];
+			$region = $res_products['region'];
+			$price = $res_products['price'];
+			$section_id = $res_products['section_id'];
+			$product_id = $res_products['product_id'];
 
 			//Вывод карточки товара в модальное окно
 			echo "
@@ -51,14 +52,14 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 					</div>
 					<div class=\"popup__text\">Состояние: $condition_rating<br>$description<br> Комплект: $bundle<br> Регион: $region<br> Цена $price ₽
 					</div>
-					<a href=\"#\" class=\"btn popap-btn\" id=\"add_$product_id\">Добавить в Корзину</a>
+					<a href=\"#\" class=\"btn popap-btn add-cart\" id=\"add_$section_id-$product_id\">Добавить в Корзину</a>
 				</div>
                             ";
 		}
 
 		//Закрытие базы данных
 		mysqli_close($db);
-		
+
 	} else {
 		echo "Не удалось выбрать базу данных.";
 	}

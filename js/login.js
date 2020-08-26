@@ -4,14 +4,9 @@ $('#signin-form').on('submit',
     function(e) {
 
         e.preventDefault();
-        //Получение логина из формы
+        //Получение данных формы
         let formData = $(this).serialize();
-        console.log(formData);
-        //$('body').load('/models/loginModel.php', formData);
-
-
-
-
+        //
         $.getJSON('/models/loginModel.php', formData, function(data) {
 
 

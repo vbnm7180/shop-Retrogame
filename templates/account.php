@@ -3,7 +3,7 @@
 	<div class="pa__form-wrapper">
 	<?php
 		$root = $_SERVER['DOCUMENT_ROOT'];
-		require("$root/models/accountModel.php");
+		require("$root/models/accountDataModel.php");
 		?>
 	</div>
 	<div class="form_separator"></div>

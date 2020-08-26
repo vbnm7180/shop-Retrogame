@@ -29,14 +29,14 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 		$postcode = $res['postcode'];
 
 		echo "
-		<form class=\"pa__form\">
+		<form class=\"pa__form\" id=\"account-form\">
 		<label for=\"\" class=\"form__title\">личный кабинет</label>
-			<input type=\"text\" placeholder=\"ФИО\" class=\"pa__input\" value=\"$name\">
-			<input type=\"text\" placeholder=\"Телефон\" class=\"pa__input\" value=\"$phone\">
-			<input type=\"text\" placeholder=\"Электронная почта\" class=\"pa__input\" value=\"$login\">
-			<input type=\"text\" placeholder=\"Город\" class=\"pa__input\" value=\"$city\">
-			<input type=\"text\" placeholder=\"Улица/Дом/Квартира\" class=\"pa__input\" value=\"$street\">
-			<input type=\"text\" placeholder=\"Индекс\" class=\"pa__input\" value=\"$postcode\">
+			<input type=\"text\" placeholder=\"ФИО\" class=\"pa__input\" name=\"name\" value=\"$name\">
+			<input type=\"text\" placeholder=\"Телефон\" class=\"pa__input\" name=\"phone\" value=\"$phone\">
+			<input type=\"text\" placeholder=\"Электронная почта\" class=\"pa__input\" name=\"login\" value=\"$login\">
+			<input type=\"text\" placeholder=\"Город\" class=\"pa__input\" name=\"city\" value=\"$city\">
+			<input type=\"text\" placeholder=\"Улица/Дом/Квартира\" class=\"pa__input\" name=\"street\" value=\"$street\">
+			<input type=\"text\" placeholder=\"Индекс\" class=\"pa__input\" name=\"postcode\" value=\"$postcode\">
 			<div class=\"btn__wraper\">
 			<button type=\"submit\" class=\"personal__area-btn\">Сохранить</button></div>
 	</form>

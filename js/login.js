@@ -1,37 +1,34 @@
-//Кнопка войти
+//Кнопка Войти в личный кабинет
 
 $('#signin-form').on('submit',
     function(e) {
 
         e.preventDefault();
+
         //Получение данных формы
         let formData = $(this).serialize();
-        //
-        $.getJSON('/models/loginModel.php', formData, function(data) {
 
+        //Вход в личный кабинет, либо выдача ошибки
+        $.getJSON('/models/loginModel.php', formData, function(success) {
 
-            if (data.login == 0) {
+            if (success.login == 0) {
                 $('.signin__email').text('Неверный Email');
                 $('.signin__email').css('color', '#DF2121');
                 $('.signin__email').next().css('border-color', '#DF2121');
             }
-            if (data.password == 0) {
+            if (success.password == 0) {
                 $('.signin__passw').text('Неверный пароль');
                 $('.signin__passw').css('color', '#DF2121');
                 $('.signin__passw').next().css('border-color', '#DF2121');
             }
-            if (data.login == 1 && data.password == 1) {
+            if (success.login == 1 && success.password == 1) {
                 window.location.reload("/controllers/pageController.php?page_id=account");
             }
-
         });
-
-
-
     }
 );
 
-//Изменение инпута после ошибки
+//Изменение подписей полей ввода при наборе текста после отображения ошибки
 
 $('.email__input').on('input',
     function() {

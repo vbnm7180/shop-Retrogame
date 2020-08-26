@@ -1,17 +1,15 @@
-//Кнопка зарегистрироваться
+//Кнопка Зарегистрироваться
 
 $('#signup-form').on('submit',
     function(e) {
 
         e.preventDefault();
-        //Получение логина из формы
+
+        //Получение данных формы
         let formData = $(this).serialize();
-        console.log(formData);
-        //$('body').load('/models/registerModel.php', formData);
 
-
+        //Регистрация, либо выдача сообщения об ошибке
         $.getJSON('/models/registerModel.php', formData, function(data) {
-
 
             if (data.login == 0) {
                 $('.signup__email').text('Такой Email уже зарегистрирован');
@@ -26,13 +24,11 @@ $('#signup-form').on('submit',
             if (data.login == 1 && data.password == 1) {
                 window.location.reload("/controllers/pageController.php?page_id=account");
             }
-
         });
-
     }
 );
 
-//Изменение инпута после ошибки
+//Изменение подписей полей ввода при наборе текста после отображения ошибки
 
 $('.password-rep__input').on('input',
     function() {

@@ -1,14 +1,10 @@
 <?php
 
-
 //Старт сессии
 session_start();
 
-/*Выбор № секции (игры или приставки) и категории(по приставке), 
-в которой находится товар из запроса после открытия модального окна 
-*/
+//Выбор номера категории товара - игровой приставки
 $categ = $_REQUEST['categ'];
-//$section_id = $categ[0];
 $reg = '/-(\d+)/';
 preg_match($reg, $categ, $arr);
 $categ_id = $arr[1];
@@ -19,26 +15,19 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 	//Соединяемся с базой данных retrogame
 	if (mysqli_select_db($db, 'retrogame2')) {
 
-		//Выбор названия категории
+		//Запрос для выбора названия категории
 		$select_category_name = 'SELECT * FROM `categories` WHERE `category_id`=' . $categ_id . '';
 
-		//Выбор товаров
+		//Запрос для выбора товаров
 		$select_products = 'SELECT * FROM `consoles_products` WHERE `category_id`='. $categ_id . '';
 
-		//Запросы к бд
+		//Выполнение запросов
 		$query_category_name = mysqli_query($db, $select_category_name);
 		$query_products = mysqli_query($db, $select_products);
-
 
 		//Обработка результатов запроса названия категории
 		$res1 = mysqli_fetch_array($query_category_name);
 		$category_name = $res1['category_name'];
-
-		/*
-		echo "				
-		<div class=\"popup__main-text\"><span class=\"popup__console-name\">$category_name</span>  Товары в наличии</div>
-		";
-		*/
 
 		//Обработка результатов запроса товаров. Цикл пока не пройдут все товары выбранной категории
 		while ($res2 = mysqli_fetch_array($query_products)) {
@@ -53,6 +42,7 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 			$price = $res2['price'];
 			$product_id = $res2['product_id'];
 
+			//Вывод карточки товара в модальное окно
 			echo "
 				<div class=\"popup__card\">
 					<div class=\"popup__img\"><img src=\"/images/consoles/$image\" alt=\"\" class=\"popup-img\"></div>
@@ -65,8 +55,10 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 				</div>
                             ";
 		}
+
 		//Закрытие базы данных
 		mysqli_close($db);
+		
 	} else {
 		echo "Не удалось выбрать базу данных.";
 	}

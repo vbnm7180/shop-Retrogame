@@ -2,11 +2,10 @@
 
 session_start();
 
-
-
 //Установка соединения с SQL, если соединение успешно
 if ($db = mysqli_connect('localhost', 'root', '')) {
 
+	//Получение данных для регистрации из формы
 	$name = mysqli_real_escape_string($db, $_REQUEST['name']);
 	$login = mysqli_real_escape_string($db, $_REQUEST['login']);
 	$password = mysqli_real_escape_string($db, $_REQUEST['password']);
@@ -14,37 +13,46 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 
 	$success = ['login' => 1, 'password' => 1];
 
+	//Если пароль не совпадают $success['password'] = 0
 	if ($password != $password_rep) {
 		$success['password'] = 0;
 	}
 
-
-
 	//Соединяемся с базой данных retrogame
 	if (mysqli_select_db($db, 'retrogame2')) {
 
+		//Запрос для проверки, есть ли уже такой пользователь в базе
 		$select_login = "SELECT * FROM `users` WHERE `login`='$login'";
 
-		//Запрос к бд
+		//Выполнение запроса
 		$query_login = mysqli_query($db, $select_login);
 
-		//Обработка результатов запроса в виде массива (1 элемент)
+		//Обработка результатов запроса 
 		$res_login = mysqli_num_rows($query_login);
 
+		//Если такой логи уже есть $success['login'] = 0
 		if ($res_login != 0) {
 			$success['login'] = 0;
 		}
 
+		//Если пароли совпадают и пользователя нет в базе
 		if ($success['login'] == 1 && $success['password'] == 1) {
-			$hash_password=password_hash($password, PASSWORD_DEFAULT);
+			//Хешируем введенный пароль
+			$hash_password = password_hash($password, PASSWORD_DEFAULT);
 
+			//Добавление пользователя в базу данных
 			mysqli_query($db, "INSERT INTO `users` (`login`, `password`,`name`) VALUES ('$login', '$hash_password', '$name')");
+
+			//Авторизация
 			$_SESSION['login'] = $login;
 			$_SESSION['password'] = $password;
-			//echo "INSERT INTO `users` (`login`, `password`) VALUES ('$login', '$password')";
 		}
 
+		//Вывод информации для выдачи ошибок, либо перезагрузки страницы
 		echo json_encode($success);
+
+		//Закрытие базы данных
+		mysqli_close($db);
 	} else {
 		echo "Не удалось выбрать базу данных.";
 	}

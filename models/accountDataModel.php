@@ -1,8 +1,6 @@
 <?php
 
-//session_start();
-
-$login=$_SESSION['login'];
+$login = $_SESSION['login'];
 
 //Установка соединения с SQL, если соединение успешно
 if ($db = mysqli_connect('localhost', 'root', '')) {
@@ -10,24 +8,23 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 	//Соединяемся с базой данных retrogame
 	if (mysqli_select_db($db, 'retrogame2')) {
 
+		//Запрос для выбора данных пользователя, который вошел в личный кабинет
 		$select = "SELECT * FROM `users` WHERE `login`='$login'";
-		//$select_password = "SELECT * FROM `users` WHERE `password`='$password'";
 
-		//Запрос к бд
+		//Запрос к базе данных
 		$query = mysqli_query($db, $select);
-		//$query_passw = mysqli_query($db, $select_password);
 
-		//Обработка результатов запроса в виде массива (1 элемент)
+		//Обработка результатов запроса 
 		$res = mysqli_fetch_array($query);
 
 		//Выбор данных о пользователе
-
 		$name = $res['name'];
 		$phone = $res['phone'];
 		$city = $res['city'];
 		$street = $res['street'];
 		$postcode = $res['postcode'];
 
+		//Вывод формы с текущими данными пользователя
 		echo "
 		<form class=\"pa__form\" id=\"account-form\">
 		<label for=\"\" class=\"form__title\">личный кабинет</label>
@@ -39,9 +36,11 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 			<input type=\"text\" placeholder=\"Индекс\" class=\"pa__input\" name=\"postcode\" value=\"$postcode\">
 			<div class=\"btn__wraper\">
 			<button type=\"submit\" class=\"personal__area-btn\">Сохранить</button></div>
-	</form>
+	    </form>
 		";
 
+		//Закрытие базы данных
+		mysqli_close($db);
 
 	} else {
 		echo "Не удалось выбрать базу данных.";

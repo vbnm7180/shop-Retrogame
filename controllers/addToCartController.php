@@ -12,4 +12,4 @@ if (!in_array($add_prod, $_SESSION['in_cart'])) {
 }
 
 //Вывод количества товаров в корзине
-//echo count($_SESSION['in_cart']);
+echo count($_SESSION['in_cart']);

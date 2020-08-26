@@ -12,23 +12,23 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 	//Соединяемся с базой данных retrogame
 	if (mysqli_select_db($db, 'retrogame2')) {
 
-		$count=1;
+		$count = 1;
 
 		foreach ($_SESSION['in_cart'] as $val) {
 
-			$reg='/\d+/';
-			preg_match_all($reg,$val,$arr);
-			
-			$section_id=$arr[0];
-			$product_id=$arr[1];
+			$reg = '/\d+/';
+			preg_match_all($reg, $val, $arr);
 
-			if ($section_id==1) {
-				$table='consoles_products';
-				$image_path='consoles';
+			$section_id = $arr[0][0];
+			$product_id = $arr[0][1];
+
+			if ($section_id == 1) {
+				$table = 'consoles_products';
+				$image_path = 'consoles';
 			}
-			if ($section_id==2) {
-				$table='games_products';
-				$image_path='games';
+			if ($section_id == 2) {
+				$table = 'games_products';
+				$image_path = 'games';
 			}
 
 			//Выбор товаров, которые есть в корзине
@@ -48,7 +48,7 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 
 			//Вывод перечня товаров в корзине
 			echo "
-			<div class=\"bucket__product__card\">
+		<div class=\"bucket__product__card\">
 			<div class=\"card__number\">
 			  $count.
 			</div>
@@ -56,18 +56,17 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 			<div class=\"name_product\">$name</div>
 			<div class=\"numberOf\">1шт</div>
 			<div class=\"card-price\">$price&#8381; </div>
-			<button class=\"btn-bucket\" type=\"button\" id=\"bucket-card-btn\"> <img src=\"/images/bucket/out.png\" alt=\"out\"> </button>
+			<button class=\"btn-bucket del-cart\" type=\"button\" id=\"del_$section_id-$product_id\"> <img src=\"/images/bucket/out.png\" alt=\"out\"> </button>
 		</div>
 		";
 
-		$count++;
+			$count++;
+
 		}
-	} 
-	else {
+	} else {
 		echo "Не удалось выбрать базу данных.";
 	}
-} 
-else {
+} else {
 	echo "Не удалось подключиться к базе данных.";
 	echo "Ошибка:" . mysqli_connect_error() . "";
 }

@@ -25,7 +25,7 @@
 			</div>
 			<div class="sum-info">
 				<div class="goods">
-					Товары: 3
+					Товары: <?php echo count($_SESSION['in_cart']); ?>
 				</div>
 				<div class="goods__price">
 					<b>15000&#8381; </b>

@@ -1,34 +1,29 @@
 <?php
 
-
-//Старт сессии
-//session_start();
-
-//session_destroy();
-
 //Установка соединения с SQL, если соединение успешно
 if ($db = mysqli_connect('localhost', 'root', '')) {
 
 	//Соединяемся с базой данных retrogame
 	if (mysqli_select_db($db, 'retrogame2')) {
 
+		//Вывод сообщения, если в корзине нет товаров
 		if (count($_SESSION['in_cart'])==0)
 		{
 			echo 'Корзина пуста';
 		}
 
-		$count = 1;
-
-		
+		$count = 1; //счетчик строки товара в корзине
 
 		foreach ($_SESSION['in_cart'] as $val) {
 
+			//Выбор id секции и id товара
 			$reg = '/\d+/';
 			preg_match_all($reg, $val, $arr);
 
 			$section_id = $arr[0][0];
 			$product_id = $arr[0][1];
 
+			//Выбор названия таблицы для запроса в базу данных
 			if ($section_id == 1) {
 				$table = 'consoles_products';
 				$image_path = 'consoles';
@@ -44,7 +39,7 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 			//Запрос к бд
 			$query = mysqli_query($db, $select_products);
 
-			//Обработка результатов запроса в виде массива (1 элемент)
+			//Обработка результатов запроса 
 			$res = mysqli_fetch_array($query);
 
 			//Выбор информации о товаре

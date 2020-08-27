@@ -11,8 +11,7 @@ if (!in_array($add_prod, $_SESSION['in_cart'])) {
 	array_push($_SESSION['in_cart'], $add_prod);
 }
 
-//Вывод количества товаров в корзине
-//echo count($_SESSION['in_cart']);
+//Подсчет общей цены товаров в корзине
 
 //Установка соединения с SQL, если соединение успешно
 if ($db = mysqli_connect('localhost', 'root', '')) {
@@ -20,15 +19,14 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 	//Соединяемся с базой данных retrogame
 	if (mysqli_select_db($db, 'retrogame2')) {
 
-		//foreach ($_SESSION['in_cart'] as $val) {
-
+		    //Выбор id секции и id товара
 			$reg = '/\d+/';
 			preg_match_all($reg, $add_prod, $arr);
 
 			$section_id = $arr[0][0];
 			$product_id = $arr[0][1];
 
-
+			//Выбор названия таблицы для запроса в базу данных
 			if ($section_id == 1) {
 				$table = 'consoles_products';
 				$image_path = 'consoles';
@@ -38,21 +36,20 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 				$image_path = 'games';
 			}
 
-			//Выбор товаров, которые есть в корзине
+			//Выбор добавленного в корзину товара
 			$select_products = "SELECT * FROM `$table` WHERE `product_id`='$product_id'";
 
 			//Запрос к бд
 			$query = mysqli_query($db, $select_products);
 
-			//Обработка результатов запроса в виде массива (1 элемент)
+			//Обработка результатов запроса
 			$res = mysqli_fetch_array($query);
 
-			//Выбор информации о товаре
+			//Выбор цены товара
 			$price = $res['price'];
 
+			//Вычисление общей цены товаров в корзине
 			$_SESSION['total_price']+=$price;
-
-		//}
 
 		//Закрытие базы данных
 		mysqli_close($db);

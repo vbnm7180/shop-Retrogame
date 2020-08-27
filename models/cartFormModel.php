@@ -33,9 +33,6 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 			$postcode = $res['postcode'];
 		}
 
-
-
-
 		//Вывод формы с текущими данными пользователя
 		echo "
 		<form class=\"bucket__form\">

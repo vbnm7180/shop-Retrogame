@@ -29,6 +29,7 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 		$res_category_name = mysqli_fetch_array($query_category_name);
 		$category_name = $res_category_name['category_name'];
 
+		//Вывод заголовка модального окна
 		echo "<div class=\"popup__main-text\"><span class=\"popup__console-name\">$category_name</span>&nbsp;&nbsp;&nbsp;&nbsp;Товары в наличии</div>";
 
 		//Обработка результатов запроса товаров. Цикл пока не пройдут все товары выбранной категории
@@ -45,8 +46,10 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 			$section_id = $res_products['section_id'];
 			$product_id = $res_products['product_id'];
 			
+			//id для кнопки
 			$btn_id=$section_id.'-'.$product_id;
 
+			//Изменение кнопки в зависимости от наличия товара в корзине
 			if (in_array($btn_id,$_SESSION['in_cart'])){
 				$add_btn_display='displaynone';
 				$go_btn_display='displayblock';
@@ -55,7 +58,6 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 				$add_btn_display='displayblock';
 				$go_btn_display='displaynone';
 			}
-
 
 			//Вывод карточки товара в модальное окно
 			echo "

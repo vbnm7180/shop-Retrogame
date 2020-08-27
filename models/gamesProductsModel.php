@@ -31,8 +31,10 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 			$section_id = $res['section_id'];
 			$product_id = $res['product_id'];
 
+			//id для кнопки
 			$btn_id=$section_id.'-'.$product_id;
 
+			//Изменение кнопки в зависимости от наличия товара в корзине
 			if (in_array($btn_id,$_SESSION['in_cart'])){
 				$add_btn_display='displaynone';
 				$go_btn_display='displayblock';

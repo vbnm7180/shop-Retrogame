@@ -28,10 +28,12 @@ $('body').on('click', '.del-cart',
         //Передача id товара серверу, возвращается количество товаров в массиве корзины
         let data = "del_prod=" + del_prod[0];
         console.log(del_prod);
-        $.get('/controllers/deleteFromCartController.php', data, function(res) {
+        $.getJSON('/controllers/deleteFromCartController.php', data, function(res) {
             $(e.target).parent().remove();
-            let count = 'Товары: ' + res;
+            let count = 'Товары: ' + res.count;
             $('.goods').text(count);
+            let price = '<b>' + res.price + '&#8381;</b>';
+            $('.goods__price').html(price);
         });
         //$('.cart-count').load('/controllers/deleteFromCartController.php', data);
         //при обращении к методам jquery нужно использовать $ всегда

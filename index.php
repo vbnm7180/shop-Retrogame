@@ -8,6 +8,10 @@ if (!isset($_SESSION['in_cart'])) {
 	$_SESSION['in_cart'] = array();
 }
 
+if (!isset($_SESSION['total_price'])) {
+	$_SESSION['total_price'] = 0;
+}
+
 
 
 //Создание переменных сессии для авторизации

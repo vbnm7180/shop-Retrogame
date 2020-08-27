@@ -28,7 +28,7 @@
 					Товары: <?php echo count($_SESSION['in_cart']); ?>
 				</div>
 				<div class="goods__price">
-					<b>15000&#8381; </b>
+				  <b><?php  echo $_SESSION['total_price'];  ?> &#8381; </b>
 				</div>
 			</div>
 			<div class="sumbtn">

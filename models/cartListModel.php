@@ -43,7 +43,7 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 			//Выбор информации о товаре
 			$name = $res['name'];
 			$image = $res['image'];
-			$price = $res['price'];
+			$price = number_format($res['price'],0,'','.');
 			$product_id = $res['product_id'];
 
 			//Вывод перечня товаров в корзине

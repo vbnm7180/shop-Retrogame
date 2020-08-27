@@ -39,9 +39,11 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 			$description = $res_products['description'];
 			$bundle = $res_products['bundle'];
 			$region = $res_products['region'];
-			$price = $res_products['price'];
+			$price = number_format($res_products['price'],0,'','.');
 			$section_id = $res_products['section_id'];
 			$product_id = $res_products['product_id'];
+
+
 
 			//Вывод карточки товара в модальное окно
 			echo "

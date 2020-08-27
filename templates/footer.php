@@ -2,14 +2,14 @@
                 <div class="container">
                     <div class="footer__row">
                         <div class="footer__logo item1">
-                            <img src="assets/images/logo_rg.png" alt="" class="logo">
+                            <img src="/images/logo_rg.png" alt="" class="logo">
                         </div>
                         <div class="footer__link__terms item1">
-                            <a href="#" class="footer_link sec">Политика конфиденциальности</a>
-                            <a href="#" class="footer_link third">Условия доставки и оплаты</a>
+                            <a href="/docs/politika.docx" target="_blank" class="footer_link sec">Политика конфиденциальности</a>
+                            <a href="/docs/oplata_i_dostavka.docx" class="footer_link third">Условия доставки и оплаты</a>
                         </div>
                         <div class="footer__link__terms item1">
-                            <a href="#" class="footer_link sec ">Политика конфиденциальности</a>
+                            <a href="/docs/soglashenie.docx" class="footer_link sec ">Соглашение на обработку данных</a>
                             <div class="footer_link sec">© 2020 retro-game.com Все права защищены.</div>
                         </div>
                         <div class="contacts__footer item1">
@@ -21,9 +21,9 @@
                             </div>
                         </div>
                         <div class="footer__icons">
-                            <img src="assets/images/yt_icon.png" alt="youtube" class="footer__image">
-                            <img src="assets/images/vk_icon.png" alt="vk" class="footer__image">
-                            <img src="assets/images/instagram_icon.png" alt="isntagram" class="footer__image">
+                            <img src="/images/yt_icon.png" alt="youtube" class="footer__image">
+                            <img src="/images/vk_icon.png" alt="vk" class="footer__image">
+                            <img src="/images/instagram_icon.png" alt="isntagram" class="footer__image">
                         </div>
 
 

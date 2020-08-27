@@ -22,3 +22,7 @@
 .displayblock {
     display: block;
 }
+
+.popap-btn {
+    border: none;
+}

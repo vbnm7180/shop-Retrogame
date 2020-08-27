@@ -20,7 +20,7 @@ body {
 }
 
 .background__figures {
-    background-image: url(../../assets/images/figures.png);
+    background-image: url(../images/figures.png);
     height: 100%;
     background-size: contain;
     background-position: 50%
@@ -2411,7 +2411,7 @@ h4 {
 }
 
 .form__bg {
-    background-image: url(../../assets/images/private_cab/private_bg.png);
+    background-image: url(../images/private_cab/private_bg.png);
     height: 100%;
     background-size: contain;
     background-position: 50%;
@@ -2525,7 +2525,7 @@ h4 {
 }
 
 .pa__content {
-    background-image: url(../../assets/images/personal_area/personal_area_bg.png);
+    background-image: url(../images/personal_area/personal_area_bg.png);
     height: 100%;
     background-size: contain;
     background-position: 50%;

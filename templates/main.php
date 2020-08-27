@@ -17,14 +17,11 @@
 </main>
 <div class="background__figures">
 
-    <div class="popup" id="popup-nintendo-64">
+    <div class="popup">
         <div class="popup__body">
             <div class="popup__content">
-                <div class="popup__main-text"><span class="popup__console-name">ds</span> Товары в наличии</div>
                 <button type="button" class="popup__close"><img src="/images/popup/popup_close.png" alt="quit" class="popup__close-img"></button>
-
-
-
+                <div class="popup__cards"></div>
             </div>
         </div>
 

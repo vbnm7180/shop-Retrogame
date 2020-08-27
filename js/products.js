@@ -8,7 +8,7 @@ $(".card__btn").on("click",
         let data = "categ=" + categ;
 
         //Загрузка товаров в модальное окно из базы данных
-        $('.popup__content').load('/models/consolesProductsModel.php', data);
+        $('.popup__cards').load('/models/consolesProductsModel.php', data);
     }
 );
 

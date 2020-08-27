@@ -43,6 +43,14 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 			$section_id = $res_products['section_id'];
 			$product_id = $res_products['product_id'];
 
+			if (in_array($categ,$_SESSION['in_cart'])){
+				$add_btn_display='displaynone';
+				$go_btn_display='displayblock';
+			}
+			else{
+				$add_btn_display='displayblock';
+				$go_btn_display='displaynone';
+			}
 
 
 			//Вывод карточки товара в модальное окно
@@ -54,7 +62,8 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 					</div>
 					<div class=\"popup__text\">Состояние: $condition_rating<br>$description<br> Комплект: $bundle<br> Регион: $region<br> Цена $price ₽
 					</div>
-					<a href=\"#\" class=\"btn popap-btn add-cart\" id=\"add_$section_id-$product_id\">Добавить в Корзину</a>
+					<button type=\"button\" class=\"btn popap-btn add-cart $add_btn_display\" id=\"add_$section_id-$product_id\">Добавить в Корзину</button>
+					<button type=\"button\" class=\"btn popap-btn go-cart $go_btn_display\" id=\"add_$section_id-$product_id\">Перейти в корзину</button>
 				</div>
                             ";
 		}

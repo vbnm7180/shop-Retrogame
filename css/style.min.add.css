@@ -14,3 +14,11 @@
     outline: none;
     cursor: pointer
 }
+
+.displaynone {
+    display: none;
+}
+
+.displayblock {
+    display: block;
+}

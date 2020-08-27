@@ -56,7 +56,7 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 			<div class=\"name_product\">$name</div>
 			<div class=\"numberOf\">1шт</div>
 			<div class=\"card-price\">$price&#8381; </div>
-			<button class=\"btn-bucket del-cart\" type=\"button\" id=\"del_$section_id-$product_id\"> <img src=\"/images/bucket/out.png\" alt=\"out\"> </button>
+			<button class=\"btn-bucket del-cart\" type=\"button\" id=\"del_$section_id-$product_id\"> </button>
 		</div>
 		";
 

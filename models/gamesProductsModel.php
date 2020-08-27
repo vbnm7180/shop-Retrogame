@@ -31,6 +31,17 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 			$section_id = $res['section_id'];
 			$product_id = $res['product_id'];
 
+			$btn_id=$section_id.'-'.$product_id;
+
+			if (in_array($btn_id,$_SESSION['in_cart'])){
+				$add_btn_display='displaynone';
+				$go_btn_display='displayblock';
+			}
+			else{
+				$add_btn_display='displayblock';
+				$go_btn_display='displaynone';
+			}
+
 			//Вывод карточки товара
 			echo "
 			<div class=\"game__card\">
@@ -40,8 +51,9 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 			<div class=\"game__title\">
 			   $name
 			</div>
-			<button class=\"btn game-btn-buy add-cart\" id=\"add_$section_id-$product_id\">В корзину</button>
-		    </div>
+			<button class=\"btn game-btn-buy add-cart $add_btn_display\" id=\"add_$section_id-$product_id\">В корзину</button>
+			<button class=\"btn game-btn-buy go-cart $go_btn_display\" id=\"add_$section_id-$product_id\">Перейти в корзину</button>
+			</div>
             ";
 		}
 

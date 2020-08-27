@@ -22,7 +22,7 @@ $('#signup-form').on('submit',
                 $('.signup__passw').next().css('border-color', '#DF2121');
             }
             if (data.login == 1 && data.password == 1) {
-                window.location.reload("/controllers/pageController.php?page_id=account");
+                window.location.href = "/controllers/pageController.php?page_id=account";
             }
         });
     }

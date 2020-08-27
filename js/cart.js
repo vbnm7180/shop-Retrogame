@@ -11,8 +11,8 @@ $('body').on('click', '.add-cart',
         $.get('/controllers/addToCartController.php', data);
         //$('.cart-count').load('/controllers/addToCartController.php', data);
         //Смена кнопки с Добавить в корзину на Перейти в корзину
-        //$(e.target).css('display', 'none');
-        //$(e.target).next('.cart-form').removeClass('displaynone');
+        $(e.target).removeClass('displayblock').addClass('displaynone');
+        $(e.target).next('.go-cart').removeClass('displaynone').addClass('displayblock');
 
 
     }
@@ -44,5 +44,15 @@ $('body').on('click', '.del-cart',
 
 
 
+    }
+);
+
+//Перейти в корзину
+
+$('body').on('click', '.go-cart',
+    function() {
+        let page = '&page_id=cart';
+        window.location.href = "/controllers/pageController.php?page_id=cart";
+        //window.location.reload("/controllers/pageController.php?page_id=cart");
     }
 );

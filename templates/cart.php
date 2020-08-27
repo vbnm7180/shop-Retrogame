@@ -28,7 +28,7 @@
 					Товары: <?php echo count($_SESSION['in_cart']); ?>
 				</div>
 				<div class="goods__price">
-				  <b><?php  echo $_SESSION['total_price'];  ?> &#8381; </b>
+					<b><?php echo $_SESSION['total_price'];  ?> &#8381; </b>
 				</div>
 			</div>
 			<div class="sumbtn">
@@ -38,20 +38,11 @@
 	</div>
 
 	<div class="row__wraper row__wraper-2">
-		<form action="" class="bucket__form">
-			<div class="bucket__form-wraper">
-				<label for="">Адрес доставки</label>
-				<input type="text" class="bucket__input" placeholder="Страна/Город">
-				<input type="text" class="bucket__input" placeholder="Улица/Квартира/Дом">
-				<input type="text" class="bucket__input" placeholder="Индекс">
-			</div>
-			<div class="bucket__form-wraper bucket__form-wraper-2">
-				<label for="">Личная информация</label>
-				<input type="text" class="bucket__input" placeholder="ФИО">
-				<input type="text" class="bucket__input" placeholder="Номер телефона">
-				<input type="text" class="bucket__input" placeholder="Электронная почта">
-			</div>
-		</form>
+		<?php
+			$root = $_SERVER['DOCUMENT_ROOT'];
+			require("$root/models/cartFormModel.php");
+
+		?>
 		<div class="bucket__helper">Остались вопросы? <br><span class="vk__span">Напишите нам <a href="#"> Вконтакте</a></span></div>
 	</div>
 

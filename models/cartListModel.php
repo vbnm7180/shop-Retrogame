@@ -12,7 +12,14 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 	//Соединяемся с базой данных retrogame
 	if (mysqli_select_db($db, 'retrogame2')) {
 
+		if (count($_SESSION['in_cart'])==0)
+		{
+			echo 'Корзина пуста';
+		}
+
 		$count = 1;
+
+		
 
 		foreach ($_SESSION['in_cart'] as $val) {
 

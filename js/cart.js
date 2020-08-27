@@ -29,6 +29,9 @@ $('body').on('click', '.del-cart',
         let data = "del_prod=" + del_prod[0];
         console.log(del_prod);
         $.getJSON('/controllers/deleteFromCartController.php', data, function(res) {
+            if (res.count == 0) {
+                $('.bucket__content-cards').text('Корзина пуста');
+            }
             $(e.target).parent().remove();
             let count = 'Товары: ' + res.count;
             $('.goods').text(count);

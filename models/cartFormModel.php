@@ -35,18 +35,18 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 
 		//Вывод формы с текущими данными пользователя
 		echo "
-		<form class=\"bucket__form\">
+		<form class=\"bucket__form\" id=\"bucket-form\">
 			<div class=\"bucket__form-wraper\">
 				<label for=\"\">Адрес доставки</label>
-				<input type=\"text\" class=\"bucket__input\" placeholder=\"Город\" value=\"$city\">
-				<input type=\"text\" class=\"bucket__input\" placeholder=\"Улица/Квартира/Дом\" value=\"$street\">
-				<input type=\"text\" class=\"bucket__input\" placeholder=\"Индекс\" value=\"$postcode\">
+				<input type=\"text\" class=\"bucket__input\" placeholder=\"Город\" name=\"city\" value=\"$city\">
+				<input type=\"text\" class=\"bucket__input\" placeholder=\"Улица/Квартира/Дом\" name=\"street\" value=\"$street\">
+				<input type=\"text\" class=\"bucket__input\" placeholder=\"Индекс\" name=\"postcode\" value=\"$postcode\">
 			</div>
 			<div class=\"bucket__form-wraper bucket__form-wraper-2\">
 				<label for=\"\">Личная информация</label>
-				<input type=\"text\" class=\"bucket__input\" placeholder=\"ФИО\" value=\"$name\">
-				<input type=\"text\" class=\"bucket__input\" placeholder=\"Номер телефона\" value=\"$phone\">
-				<input type=\"text\" class=\"bucket__input\" placeholder=\"Электронная почта\" value=\"$login\">
+				<input type=\"text\" class=\"bucket__input\" placeholder=\"ФИО\" name=\"name\" value=\"$name\">
+				<input type=\"text\" class=\"bucket__input\" placeholder=\"Номер телефона\" name=\"phone\" value=\"$phone\">
+				<input type=\"text\" class=\"bucket__input\" placeholder=\"Электронная почта\" name=\"email\" value=\"$login\">
 			</div>
 		</form>
 		";

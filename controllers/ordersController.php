@@ -26,8 +26,15 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 		$query_max_order=mysqli_query($db,$select_max_order);
 		$res_max_order=mysqli_fetch_array($query_max_order);
 		$order_number=$res_max_order[0]+1;
+		$products=implode(', ',$_SESSION['in_cart']);
 
+			//Выбор добавленного в корзину товара
+			$select_to_orders = "INSERT INTO `orders` (`order_number`, `products`,`customer_name`,`customer_email`,`customer_phone`,`customer_city`,`customer_street`,`customer_postcode`,`total_price`,`order_date`) VALUES ('$order_number','$products','$name','$email','$phone','$city','$street','$postcode','$total',CURRENT_DATE())";
 
+			//Запрос к бд
+			$query = mysqli_query($db, $select_to_orders);
+
+			/*
 		foreach ($_SESSION['in_cart'] as $val) {
 
 			//Выбор id секции и id товара
@@ -37,12 +44,9 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 			$section_id = $arr[0][0];
 			$product_id = $arr[0][1];
 
-			//Выбор добавленного в корзину товара
-			$select_to_orders = "INSERT INTO `orders` (`order_number`, `section_id`,`product_id`,`customer_name`,`customer_email`,`customer_phone`,`customer_city`,`customer_street`,`customer_postcode`,`total_price`,`order_date`) VALUES ('$order_number', '$section_id', '$product_id','$name','$email','$phone','$city','$street','$postcode','$total',CURRENT_DATE())";
 
-			//Запрос к бд
-			$query = mysqli_query($db, $select_to_orders);
 		}
+		*/
 
 
 		//Закрытие базы данных

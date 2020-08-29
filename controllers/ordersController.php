@@ -9,9 +9,6 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 	//Соединяемся с базой данных retrogame
 	if (mysqli_select_db($db, 'retrogame2')) {
 
-
-
-
 		//Получение данных для заказа из формы
 		$name = mysqli_real_escape_string($db, $_REQUEST['name']);
 		$email = mysqli_real_escape_string($db, $_REQUEST['email']);
@@ -23,23 +20,28 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 		//Получение данных для заказа из сессии
 		$total = $_SESSION['total_price'];
 
+		//Запрос для номера заказа
+
+		$select_max_order="SELECT MAX(`order_number`) FROM `orders`";
+		$query_max_order=mysqli_query($db,$select_max_order);
+		$res_max_order=mysqli_fetch_array($query_max_order);
+		$order_number=$res_max_order[0]+1;
+
+
 		foreach ($_SESSION['in_cart'] as $val) {
 
 			//Выбор id секции и id товара
 			$reg = '/\d+/';
-			preg_match_all($reg, $add_prod, $arr);
+			preg_match_all($reg, $val, $arr);
 
 			$section_id = $arr[0][0];
 			$product_id = $arr[0][1];
 
 			//Выбор добавленного в корзину товара
-			$select_products = "SELECT * FROM `$table` WHERE `product_id`='$product_id'";
+			$select_to_orders = "INSERT INTO `orders` (`order_number`, `section_id`,`product_id`,`customer_name`,`customer_email`,`customer_phone`,`customer_city`,`customer_street`,`customer_postcode`,`total_price`,`order_date`) VALUES ('$order_number', '$section_id', '$product_id','$name','$email','$phone','$city','$street','$postcode','$total',CURRENT_DATE())";
 
 			//Запрос к бд
-			$query = mysqli_query($db, "INSERT INTO `users` (`login`, `password`,`name`) VALUES ('$login', '$hash_password', '$name')");
-
-			//Обработка результатов запроса
-			$res = mysqli_fetch_array($query);
+			$query = mysqli_query($db, $select_to_orders);
 		}
 
 

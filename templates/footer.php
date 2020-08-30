@@ -44,7 +44,8 @@
     <script src="/js/register.js"></script>
     <script src="/js/account.js"></script>
     <script src="/js/cart.js"></script>
-    <script src="/js/orders.js"></script>                 
+    <script src="/js/orders.js"></script>  
+    <script src="/js/header.js"></script>                
     <script src="/js/app.min.js"></script>
 
 </body>

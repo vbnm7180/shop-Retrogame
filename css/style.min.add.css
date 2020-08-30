@@ -34,3 +34,10 @@
 .game-btn-buy {
     height: 40px;
 }
+
+.nav__sega,
+.nav__nintendo,
+.nav__games,
+.nav__about {
+    cursor: pointer;
+}

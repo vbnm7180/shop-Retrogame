@@ -28,11 +28,11 @@
 			<div class="container__header1">
 				<ul class="header__nav header__item">
 					<li class="nav__item">
-						<a href="#sega" class="nav__link smooth__link">Sega</a>
+						<a class="nav__link smooth__link nav__sega">Sega</a>
 					</li>
-					<li class="nav__item"><a href="#nintendo" class="nav__link smooth__link">Nintendo</a></li>
-					<li class="nav__item"> <a href="#games" class="nav__link smooth__link">Игры</a></li>
-					<li class="nav__item"> <a href="#about" class="nav__link smooth__link" id="last">О нас</a></li>
+					<li class="nav__item"><a class="nav__link smooth__link nav__nintendo">Nintendo</a></li>
+					<li class="nav__item"> <a class="nav__link smooth__link nav__games">Игры</a></li>
+					<li class="nav__item"> <a class="nav__link smooth__link nav__about" id="last">О нас</a></li>
 				</ul>
 				<div class="header__logo header__item">
 					<form action="/controllers/pageController.php">

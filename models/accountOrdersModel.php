@@ -10,10 +10,10 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 
 		$login = $_SESSION['login'];
 
-		//Выбор товаров, которые есть в корзине
+		//Выбор заказов пользователя
 		$select_orders = "SELECT * FROM `orders` WHERE `customer_email`='$login' ORDER BY `order_number` DESC";
 
-		//Запрос к бд
+		//Запросы к бд
 		$query1 = mysqli_query($db, $select_orders);
 		$query2 = mysqli_query($db, $select_orders);
 
@@ -26,12 +26,13 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 
 			while ($res_order= mysqli_fetch_array($query2)) {
 
-
-
+				//Вывод номера заказа и дополнение его нулями слева
 				$order_number = str_pad($res_order['order_number'], 7, "0", STR_PAD_LEFT);
+
+				//Вывод даты заказа
 				$date = date('d.m.Y', strtotime($res_order['order_date']));
 
-
+				//Вывод шапки заказа
 				echo "
 				<div class=\"orders__info\">
 			       <div class=\"orders__header\">
@@ -41,8 +42,10 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 			       <div class=\"orders__content\">
 			";
 
+			    //Счетчик для строки товара в заказе
 				$count = 1;
 
+				//Преобразование перенчня товаров в массив
 				$prod_arr = explode(', ', $res_order['products']);
 
 				foreach ($prod_arr as $val) {
@@ -54,6 +57,7 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 					$section_id = $arr[0][0];
 					$product_id = $arr[0][1];
 
+					//Выбор таблицы для запроса к бд и секции товара
 					if ($section_id == 1) {
 						$table = 'consoles_products';
 						$image_path = 'consoles';
@@ -65,7 +69,7 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 						$section_name = 'Игра';
 					}
 
-					//Выбор товаров, которые есть в корзине
+					//Выбор товаров
 					$select_products = "SELECT * FROM `$table` WHERE `product_id`='$product_id'";
 
 					//Запрос к бд
@@ -74,15 +78,17 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 					//Обработка результатов запроса 
 					$res_product = mysqli_fetch_array($query);
 
+					//Выбор названия и цены товара
 					$product_name = $res_product['name'];
 					$product_price = $res_product['price'];
 
-
+					//Вывод строки товара в заказе
 					echo "<div class=\"order\">$count. $section_name $product_name <span>$product_price р</span> </div>";
 
 					$count++;
 				}
 
+				//Вывод футера заказа
 				$total = $res_order['total_price'];
 
 				echo "			

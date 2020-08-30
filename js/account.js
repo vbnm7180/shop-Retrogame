@@ -10,7 +10,6 @@ $('body').on('submit', '#account-form',
 );
 
 //Кнопка Выйти из личного кабинета
-
 $('.logout-btn').on('click',
     function() {
         $.get('/controllers/exitAccountController.php', function() {

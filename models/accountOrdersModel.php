@@ -34,11 +34,11 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 
 				echo "
 				<div class=\"orders__info\">
-			<div class=\"orders__header\">
-				<div class=\"order__number\">№ $order_number</div>
-				<div class=\"order__date\">$date</div>
-			</div>
-			<div class=\"orders__content\">
+			       <div class=\"orders__header\">
+				      <div class=\"order__number\">№ $order_number</div>
+				      <div class=\"order__date\">$date</div>
+			       </div>
+			       <div class=\"orders__content\">
 			";
 
 				$count = 1;
@@ -87,7 +87,7 @@ if ($db = mysqli_connect('localhost', 'root', '')) {
 
 				echo "			
 			      <div class=\"orders__price\">
-			     Общая стоимость: <span>$total р</span>
+			     Общая стоимость: <span>$total р</span></div>
 				 </div>
 				 </div>
 	              ";

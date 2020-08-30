@@ -8,3 +8,13 @@ $('body').on('submit', '#account-form',
         $.get('/models/accountUpdateFormModel.php', formData);
     }
 );
+
+//Кнопка Выйти из личного кабинета
+
+$('.logout-btn').on('click',
+    function() {
+        $.get('/controllers/exitAccountController.php', function() {
+            window.location.href = "/controllers/pageController.php?page_id=user-area";
+        });
+    }
+);

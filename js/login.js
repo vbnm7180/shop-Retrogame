@@ -9,7 +9,7 @@ $('#signin-form').on('submit',
         let formData = $(this).serialize();
 
         //Вход в личный кабинет, либо выдача ошибки
-        $.getJSON('/models/loginModel.php', formData, function(success) {
+        $.getJSON('/controllers/loginController.php', formData, function(success) {
 
             if (success.login == 0) {
                 $('.signin__email').text('Неверный Email');

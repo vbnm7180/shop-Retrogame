@@ -9,7 +9,7 @@ $('#signup-form').on('submit',
         let formData = $(this).serialize();
 
         //Регистрация, либо выдача сообщения об ошибке
-        $.getJSON('/models/registerModel.php', formData, function(data) {
+        $.getJSON('/controllers/registerController.php', formData, function(data) {
 
             if (data.login == 0) {
                 $('.signup__email').text('Такой Email уже зарегистрирован');
